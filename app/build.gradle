@@ -1,0 +1,204 @@
+import config.Versions
+import config.Application
+import config.dependencies.AnnotationProcessingDependencies
+import config.dependencies.Dependencies
+import config.dependencies.AndroidTestDependencies
+import config.dependencies.SupportDependencies
+
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'com.google.android.secrets-gradle-plugin' version '1.1.0'
+}
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdk Versions.compilesdkVersion
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId Application.id
+        minSdk Versions.minsdkVersion
+        targetSdk Versions.targetsdkVersion
+        versionCode Application.versionCode
+        versionName Application.versionName
+        multiDexEnabled true
+        configurations.all {
+            resolutionStrategy { force 'androidx.core:core-ktx:1.6.0' }
+        }
+
+        testInstrumentationRunner AndroidTestDependencies.instrumentationRunner
+    }
+
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+    }
+
+    kotlin {
+        experimental {
+            coroutines "enable"
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            manifestPlaceholders = [enableCrashReporting:"false"]
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            manifestPlaceholders = [enableCrashReporting:"true"]
+        }
+
+        innerTest {
+            matchingFallbacks = ['release']
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+}
+
+dependencies {
+    //Kotlin Dependencies
+    implementation (Dependencies.kotlin_standard_library)
+    implementation (Dependencies.kotlin_reflect)
+    implementation (Dependencies.ktx)
+    implementation (Dependencies.kotlin_coroutines)
+    implementation (Dependencies.kotlin_coroutines_android)
+
+    //Support Dependencies
+    implementation (SupportDependencies.appcompat)
+    implementation (SupportDependencies.constraintlayout)
+    implementation (SupportDependencies.material_design)
+    implementation (SupportDependencies.swipe_refresh_layout)
+    implementation (SupportDependencies.material_design)
+//    implementation (SupportDependencies.legacy_support)
+//    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    //Room Dependencies
+    implementation (Dependencies.room_ktx)
+    implementation (Dependencies.room_runtime)
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.firebase:firebase-firestore-ktx:24.0.1'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.annotation:annotation:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
+    kapt (AnnotationProcessingDependencies.room_compiler)
+
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+
+    //Permission Dependencies
+    implementation 'com.github.baurine:permission-util:1.0.3'
+    implementation 'com.github.euzee:permissionUtil:1.0.7'
+
+    //Hilt Dependencies
+    implementation (Dependencies.hilt)
+    kapt (AnnotationProcessingDependencies.hiltCompiler)
+    kapt (AnnotationProcessingDependencies.hiltCompiler2)
+    implementation 'androidx.hilt:hilt-common:1.0.0'
+
+    //Work Manager Dependencies
+    def work_version = "1.0.1"
+    implementation "androidx.work:work-runtime-ktx:$work_version"
+    implementation "android.arch.work:work-runtime-ktx:$work_version"
+    implementation("androidx.hilt:hilt-work:1.0.0")
+//    implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
+
+    // Koin Android ViewModel feature
+    implementation 'org.koin:koin-android-viewmodel:2.0.1'
+    implementation "org.koin:koin-android:2.0.1"
+    implementation "org.koin:koin-core:2.0.1"
+    implementation "org.koin:koin-java:2.0.1"
+
+    //Navigation Dependencies
+    implementation (Dependencies.navigation_runtime)
+    implementation (Dependencies.navigation_fragment)
+    implementation (Dependencies.navigation_dynamic)
+    implementation (Dependencies.navigation_config)
+
+    // Retrofit Dependencies
+    implementation (Dependencies.retrofit)
+    implementation Dependencies.retrofit_logger
+    implementation (Dependencies.retrofit_gson)
+
+    //Coroutines
+    implementation (Dependencies.lifecycle_coroutines)
+    implementation (Dependencies.kotlin_coroutines_android)
+    implementation (Dependencies.kotlin_coroutines)
+    implementation (Dependencies.kotlin_coroutines_play_services)
+    implementation (Dependencies.retrofit_coroutines_adapter)
+
+    //FireBase
+    implementation (Dependencies.firebase_boom)
+    implementation (Dependencies.firebase_analytics)
+
+    //Playstore Service
+    implementation (Dependencies.play_services)
+    //Recycler Utility
+    implementation (Dependencies.recycler_util)
+    //Expandable Recycler Utility
+    implementation (Dependencies.expandable_recycler_util2)
+    //Timber
+    implementation (Dependencies.timber_log)
+    //local storage (Paper IO)
+    implementation (Dependencies.paper_prefs)
+    // Country Picker Dependencies
+    implementation (Dependencies.countrypicker)
+    implementation (Dependencies.ccpcountrypicker)
+    //OTP VIEW
+    implementation (Dependencies.otpview)
+    //multidex
+    implementation (Dependencies.multidex)
+    //Lottie Animator
+    implementation (Dependencies.lottie_animation)
+    implementation (Dependencies.frag_nav)
+
+    //Material Dialog
+    implementation (Dependencies.material_dialog)
+    implementation (Dependencies.material_dialog_input)
+    //Ripple Dependency
+    implementation (Dependencies.ripple)
+    //Loading Dependency
+    implementation (Dependencies.spotsdialog)
+
+    //Google Maps Dependency
+    implementation (Dependencies.play_service_maps)
+    implementation (Dependencies.play_services_location)
+    implementation (Dependencies.google_map_places)
+    implementation (Dependencies.google_map_library)
+
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}
+
+secrets {
+    // To add your Maps API key to this project:
+    // 1. Create a file ./secure.properties
+    // 2. Add this line, where YOUR_API_KEY is your API key:
+    //        MAPS_API_KEY=YOUR_API_KEY
+    propertiesFileName 'secure.properties'
+    defaultPropertiesFileName 'secure.defaults.properties'
+}
+
+kapt {
+    correctErrorTypes true
+}
+repositories {
+    mavenCentral()
+}

@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".framework.presentation.fragments.authentication.RegistrationFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".views.auth.registration.EnterDetailsFragment1">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".views.auth.registration.EnterDetailsFragment1">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlinedTextFieldUserDOB"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Enter date of birth"
+                app:boxBackgroundColor="@color/textfield_background"
+                app:boxStrokeColor="@color/stroke_selector"
+                app:boxStrokeErrorColor="@color/verificatePrimaryAlt"
+                app:boxStrokeWidth="1dp"
+                app:hintTextColor="@color/hint_selector"
+                app:layout_constraintEnd_toEndOf="@+id/outlinedTextFieldUserBVN"
+                app:layout_constraintStart_toStartOf="@+id/outlinedTextFieldUserBVN"
+                app:layout_constraintTop_toBottomOf="@+id/outlinedTextFieldUserAddress">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDateOfBirth"
+                    style="@style/euc14reg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/arrow_down"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlinedTextFieldUserLGA"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Local government"
+                app:boxBackgroundColor="@color/textfield_background"
+                app:boxStrokeColor="@color/stroke_selector"
+                app:boxStrokeErrorColor="@color/verificatePrimaryAlt"
+                app:boxStrokeWidth="1dp"
+                app:hintTextColor="@color/hint_selector"
+                app:layout_constraintEnd_toEndOf="@+id/outlinedTextFieldUserTitle"
+                app:layout_constraintStart_toStartOf="@+id/outlinedTextFieldUserTitle"
+                app:layout_constraintTop_toBottomOf="@+id/outlinedTextFieldUserTitle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etLGA"
+                    style="@style/euc14reg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:drawableEnd="@drawable/arrow_down"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlinedTextFieldUserBVN"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Enter email address"
+                app:boxBackgroundColor="@color/textfield_background"
+                app:boxStrokeColor="@color/stroke_selector"
+                app:boxStrokeErrorColor="@color/verificatePrimaryAlt"
+                app:boxStrokeWidth="1dp"
+                app:hintTextColor="@color/hint_selector"
+                app:layout_constraintEnd_toEndOf="@+id/outlinedTextFieldUserid"
+                app:layout_constraintStart_toStartOf="@+id/outlinedTextFieldUserid"
+                app:layout_constraintTop_toBottomOf="@+id/outlinedTextFieldUserid"
+                app:placeholderText="e.g: gmail@gmail.com">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    style="@style/euc14reg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView20"
+                style="@style/euc15Sem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Your Account"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/close_ic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@color/space_transparent"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+                app:layout_constraintEnd_toEndOf="@+id/imageView6"
+                app:layout_constraintStart_toStartOf="@+id/imageView6"
+                app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+
+            <TextView
+                android:id="@+id/textView8"
+                style="@style/euc14reg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="64dp"
+                android:layout_marginEnd="24dp"
+                android:text="@string/privacy_policy"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/rectangleswitch2"
+                app:layout_constraintTop_toBottomOf="@+id/outlinedTextFieldUserReligion" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout1"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:hint="First Name"
+                android:paddingTop="10dp"
+                app:boxBackgroundColor="@color/textfield_background"
+                app:boxStrokeColor="@color/stroke_selector"
+                app:boxStrokeErrorColor="@color/verificatePrimaryAlt"
+                app:boxStrokeWidth="1dp"
+                app:hintTextColor="@color/hint_selector"
+                app:layout_constraintEnd_toStartOf="@+id/textInputLayout"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/outlinedTextFieldUserid"
+                app:layout_constraintTop_toBottomOf="@+id/button3"
+                app:layout_constraintWidth_percent=".40">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etFirstName"
+                    style="@style/euc14reg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="QWERTYUIOPASDFGHJKLZXCVBNMqwertzuiopasdfghjklyxcvbnm "
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:hint="Last Name"
+                android:paddingTop="10dp"
+                app:boxBackgroundColor="@color/textfield_background"
+                app:boxStrokeColor="@color/stroke_selector"
+                app:boxStrokeErrorColor="@color/verificatePrimaryAlt"
+                app:boxStrokeWidth="1dp"
+                app:hintTextColor="@color/hint_selector"
+                app:layout_constraintBottom_toBottomOf="@+id/textInputLayout1"
+                app:layout_constraintEnd_toEndOf="@+id/outlinedTextFieldUserid"
+                app:layout_constraintStart_toEndOf="@+id/textInputLayout1"
+                app:layout_constraintTop_toTopOf="@+id/textInputLayout1"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintWidth_percent=".40">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etLastName"
+                    style="@style/euc14reg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlinedTextFieldUserid"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:hint="Enter phone number"
+                app:boxBackgroundColor="@color/textfield_background"
+                app:boxStrokeColor="@color/stroke_selector"
+                app:boxStrokeErrorColor="@color/verificatePrimaryAlt"
+                app:boxStrokeWidth="1dp"
+                app:hintTextColor="@color/hint_selector"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout1"
+                app:placeholderText="e.g: 0800000007">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPhoneNumber"
+                    style="@style/euc14reg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:maxLength="11" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlinedTextFieldUserAddress"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Enter street address"
+                app:boxBackgroundColor="@color/textfield_background"
+                app:boxStrokeColor="@color/stroke_selector"
+                app:boxStrokeErrorColor="@color/verificatePrimaryAlt"
+                app:boxStrokeWidth="1dp"
+                app:hintTextColor="@color/hint_selector"
+                app:layout_constraintEnd_toEndOf="@+id/outlinedTextFieldUserLGA"
+                app:layout_constraintStart_toStartOf="@+id/outlinedTextFieldUserLGA"
+                app:layout_constraintTop_toBottomOf="@+id/outlinedTextFieldUserLGA">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etAddress"
+                    style="@style/euc14reg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlinedTextFieldUserTitle"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="State of residence"
+                app:boxBackgroundColor="@color/textfield_background"
+                app:boxStrokeColor="@color/stroke_selector"
+                app:boxStrokeErrorColor="@color/verificatePrimaryAlt"
+                app:boxStrokeWidth="1dp"
+                app:hintTextColor="@color/hint_selector"
+                app:layout_constraintEnd_toEndOf="@+id/outlinedTextFieldUserBVN"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/outlinedTextFieldUserBVN"
+                app:layout_constraintTop_toBottomOf="@+id/outlinedTextFieldUserBVN">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etState"
+                    style="@style/euc14reg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:drawableEnd="@drawable/arrow_down"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:imeOptions="actionNext"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlinedTextFieldUserReligion"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Do you have a bike?"
+                app:boxBackgroundColor="@color/textfield_background"
+                app:boxStrokeColor="@color/stroke_selector"
+                app:boxStrokeErrorColor="@color/verificatePrimaryAlt"
+                app:boxStrokeWidth="1dp"
+                app:hintTextColor="@color/hint_selector"
+                app:layout_constraintEnd_toEndOf="@+id/outlinedTextFieldUserTitle"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/outlinedTextFieldUserTitle"
+                app:layout_constraintTop_toBottomOf="@+id/outlinedTextFieldUsergender"
+                app:placeholderText="Select option">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etUserBikeStatus"
+                    style="@style/euc14reg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/arrow_down"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:imeOptions="actionNext"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlinedTextFieldUsergender"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Gender"
+                app:boxBackgroundColor="@color/textfield_background"
+                app:boxStrokeColor="@color/stroke_selector"
+                app:boxStrokeErrorColor="@color/verificatePrimaryAlt"
+                app:boxStrokeWidth="1dp"
+                app:hintTextColor="@color/hint_selector"
+                app:layout_constraintEnd_toEndOf="@+id/outlinedTextFieldUserDOB"
+                app:layout_constraintStart_toStartOf="@+id/outlinedTextFieldUserDOB"
+                app:layout_constraintTop_toBottomOf="@+id/outlinedTextFieldUserDOB">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etGender"
+                    style="@style/euc14reg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/arrow_down"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGetSecondStep"
+                style="@style/PrimaryButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="32dp"
+                android:text="Continue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <Switch
+                android:id="@+id/rectangleswitch2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:checked="false"
+                android:text=""
+                android:textOn=""
+                android:thumb="@drawable/rectangle_thumb"
+                android:track="@drawable/rectangle_track"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView8"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSelectState"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/space_transparent"
+                app:layout_constraintBottom_toBottomOf="@+id/outlinedTextFieldUserTitle"
+                app:layout_constraintEnd_toEndOf="@+id/outlinedTextFieldUserTitle"
+                app:layout_constraintStart_toStartOf="@+id/outlinedTextFieldUserTitle"
+                app:layout_constraintTop_toTopOf="@+id/outlinedTextFieldUserTitle" />
+
+            <Button
+                android:id="@+id/btnSelectBikeStatus"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/space_transparent"
+                app:layout_constraintBottom_toBottomOf="@+id/outlinedTextFieldUserReligion"
+                app:layout_constraintEnd_toEndOf="@+id/outlinedTextFieldUserReligion"
+                app:layout_constraintStart_toStartOf="@+id/outlinedTextFieldUserReligion"
+                app:layout_constraintTop_toTopOf="@+id/outlinedTextFieldUserReligion" />
+
+            <Button
+                android:id="@+id/btnSelectLGA"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/space_transparent"
+                app:layout_constraintBottom_toBottomOf="@+id/outlinedTextFieldUserLGA"
+                app:layout_constraintEnd_toEndOf="@+id/outlinedTextFieldUserLGA"
+                app:layout_constraintStart_toStartOf="@+id/outlinedTextFieldUserLGA"
+                app:layout_constraintTop_toTopOf="@+id/outlinedTextFieldUserLGA" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/space_transparent"
+                app:layout_constraintBottom_toBottomOf="@+id/outlinedTextFieldUserDOB"
+                app:layout_constraintEnd_toEndOf="@+id/outlinedTextFieldUserDOB"
+                app:layout_constraintStart_toStartOf="@+id/outlinedTextFieldUserDOB"
+                app:layout_constraintTop_toTopOf="@+id/outlinedTextFieldUserDOB" />
+
+            <Button
+                android:id="@+id/btnGender"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/space_transparent"
+                app:layout_constraintBottom_toBottomOf="@+id/outlinedTextFieldUsergender"
+                app:layout_constraintEnd_toEndOf="@+id/outlinedTextFieldUsergender"
+                app:layout_constraintStart_toStartOf="@+id/outlinedTextFieldUsergender"
+                app:layout_constraintTop_toTopOf="@+id/outlinedTextFieldUsergender" />
+
+            <!--        <com.google.android.material.button.MaterialButton-->
+            <!--            android:id="@+id/btnOpenReligion"-->
+            <!--            style="@style/Widget.MaterialComponents.Button.TextButton"-->
+            <!--            android:layout_width="0dp"-->
+            <!--            android:layout_height="0dp"-->
+            <!--            android:background="@color/space_transparent"-->
+            <!--            app:layout_constraintBottom_toBottomOf="@+id/outlinedTextFieldUserReligion"-->
+            <!--            app:layout_constraintEnd_toEndOf="@+id/outlinedTextFieldUserReligion"-->
+            <!--            app:layout_constraintStart_toStartOf="@+id/outlinedTextFieldUserReligion"-->
+            <!--            app:layout_constraintTop_toTopOf="@+id/outlinedTextFieldUserReligion" />-->
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

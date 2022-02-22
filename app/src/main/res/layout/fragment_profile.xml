@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    tools:context=".framework.presentation.fragments.main.more.ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveChanges"
+            style="@style/PrimaryButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height2"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="24dp"
+            android:text="Save changes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSelectLGA2"
+            app:layout_constraintVertical_bias="0.15" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextFieldUserLGA"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Local government"
+            app:boxBackgroundColor="@color/textfield_background"
+            app:boxStrokeColor="@color/stroke_selector"
+            app:boxStrokeErrorColor="@color/verificatePrimaryAlt"
+            app:boxStrokeWidth="1dp"
+            app:hintTextColor="@color/hint_selector"
+            app:layout_constraintEnd_toEndOf="@+id/outlinedTextFieldUserTitle"
+            app:layout_constraintStart_toStartOf="@+id/outlinedTextFieldUserTitle"
+            app:layout_constraintTop_toBottomOf="@+id/outlinedTextFieldUserTitle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLGA"
+                style="@style/euc14reg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:drawableEnd="@drawable/arrow_down"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextFieldUserTitle"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="State of residence"
+            app:boxBackgroundColor="@color/textfield_background"
+            app:boxStrokeColor="@color/stroke_selector"
+            app:boxStrokeErrorColor="@color/verificatePrimaryAlt"
+            app:boxStrokeWidth="1dp"
+            app:hintTextColor="@color/hint_selector"
+            app:layout_constraintEnd_toEndOf="@+id/outlinedTextFieldUserBVN"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/outlinedTextFieldUserBVN"
+            app:layout_constraintTop_toBottomOf="@+id/outlinedTextFieldUserBVN">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etState"
+                style="@style/euc14reg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:drawableEnd="@drawable/arrow_down"
+                android:enabled="false"
+                android:focusable="false"
+                android:imeOptions="actionNext"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextFieldUserBVN"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Enter email address"
+            app:boxBackgroundColor="@color/textfield_background"
+            app:boxStrokeColor="@color/stroke_selector"
+            app:boxStrokeErrorColor="@color/verificatePrimaryAlt"
+            app:boxStrokeWidth="1dp"
+            app:hintTextColor="@color/hint_selector"
+            app:layout_constraintEnd_toEndOf="@+id/outlinedTextFieldUserid"
+            app:layout_constraintStart_toStartOf="@+id/outlinedTextFieldUserid"
+            app:layout_constraintTop_toBottomOf="@+id/outlinedTextFieldUserid"
+            app:placeholderText="e.g: gmail@gmail.com">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                style="@style/euc14reg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextFieldUserid"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:hint="Enter phone number"
+            app:boxBackgroundColor="@color/textfield_background"
+            app:boxStrokeColor="@color/stroke_selector"
+            app:boxStrokeErrorColor="@color/verificatePrimaryAlt"
+            app:boxStrokeWidth="1dp"
+            app:hintTextColor="@color/hint_selector"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/outlinedTextFieldeLastName"
+            app:placeholderText="e.g: 0800000007">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPhoneNumber"
+                style="@style/euc14reg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:maxLength="11" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextFieldeLastName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:hint="Last name"
+            app:boxBackgroundColor="@color/textfield_background"
+            app:boxStrokeColor="@color/stroke_selector"
+            app:boxStrokeErrorColor="@color/verificatePrimaryAlt"
+            app:boxStrokeWidth="1dp"
+            app:hintTextColor="@color/hint_selector"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/outlinedTextFieldFirstName"
+            app:placeholderText="">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLastName"
+                style="@style/euc14reg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextFieldFirstName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:hint="First Name"
+            app:boxBackgroundColor="@color/textfield_background"
+            app:boxStrokeColor="@color/stroke_selector"
+            app:boxStrokeErrorColor="@color/verificatePrimaryAlt"
+            app:boxStrokeWidth="1dp"
+            app:hintTextColor="@color/hint_selector"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivProfileImage"
+            app:placeholderText="">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFirstName"
+                style="@style/euc14reg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/ivProfileImage"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/profile_ic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnSelectLGA2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/space_transparent"
+            app:layout_constraintBottom_toBottomOf="@+id/outlinedTextFieldUserLGA"
+            app:layout_constraintEnd_toEndOf="@+id/outlinedTextFieldUserLGA"
+            app:layout_constraintStart_toStartOf="@+id/outlinedTextFieldUserLGA"
+            app:layout_constraintTop_toTopOf="@+id/outlinedTextFieldUserLGA" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSelectState2"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/space_transparent"
+            app:layout_constraintBottom_toBottomOf="@+id/outlinedTextFieldUserTitle"
+            app:layout_constraintEnd_toEndOf="@+id/outlinedTextFieldUserTitle"
+            app:layout_constraintStart_toStartOf="@+id/outlinedTextFieldUserTitle"
+            app:layout_constraintTop_toTopOf="@+id/outlinedTextFieldUserTitle" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

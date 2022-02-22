@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+tools:context=".framework.presentation.general.SuccessBottomsheetFragment">
+
+
+<ImageView
+    android:id="@+id/imageView19"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:layout_marginTop="24dp"
+    android:src="@drawable/success_icon"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<TextView
+    android:id="@+id/tvSucessTitle"
+    style="@style/euc14Sem"
+    android:textSize="18sp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:text="Successful"
+    app:layout_constraintEnd_toEndOf="@+id/imageView19"
+    app:layout_constraintStart_toStartOf="@+id/imageView19"
+    app:layout_constraintTop_toBottomOf="@+id/imageView19" />
+
+<TextView
+    android:id="@+id/tvSuccessMsg"
+    style="@style/euc14reg"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginRight="16dp"
+    android:gravity="center_horizontal"
+    android:lineSpacingExtra="5dp"
+    android:text="You have successfully sent ₦5,000.00 \n to Seun Orofin "
+    android:textAlignment="center"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tvSucessTitle" />
+
+<com.google.android.material.button.MaterialButton
+    android:id="@+id/btnSuccessAction"
+    style="@style/PrimaryButtonStyle"
+    android:layout_width="0dp"
+    android:layout_height="@dimen/button_height"
+    android:layout_marginStart="32dp"
+    android:layout_marginLeft="32dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="32dp"
+    android:layout_marginRight="32dp"
+    android:layout_marginBottom="24dp"
+    android:text="Continue"
+    android:textColor="@color/white"
+    app:cornerRadius="10dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tvSuccessMsg"
+    app:layout_constraintVertical_bias="0.060000002" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

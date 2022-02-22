@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".framework.presentation.fragments.main.dashboard.activate_account.ActivateAccountFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField3"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:hint="Select Bank"
+            android:textColorHint="@color/hint_selector"
+            app:boxBackgroundColor="@color/textfield_background"
+            app:boxStrokeColor="@color/stroke_selector"
+            app:boxStrokeErrorColor="@color/verificatePrimaryAlt"
+            app:boxStrokeWidth="1dp"
+            app:hintEnabled="true"
+            app:hintTextColor="@color/hint_selector"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/outlinedTextField2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etBank"
+                style="@style/euc14reg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:focusable="false"
+                android:clickable="false"
+                android:drawableEnd="@drawable/arrow_down"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:hint="Account Name"
+            android:textColorHint="@color/hint_selector"
+            app:boxBackgroundColor="@color/textfield_background"
+            app:boxStrokeColor="@color/stroke_selector"
+            app:boxStrokeErrorColor="@color/verificatePrimaryAlt"
+            app:boxStrokeWidth="1dp"
+            app:hintEnabled="true"
+            app:hintTextColor="@color/hint_selector"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/outlinedTextField1"
+            app:placeholderText="Enter your account name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAccountName"
+                style="@style/euc14reg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField1"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:hint="Account Number"
+            android:textColorHint="@color/hint_selector"
+            app:boxBackgroundColor="@color/textfield_background"
+            app:boxStrokeColor="@color/stroke_selector"
+            app:boxStrokeErrorColor="@color/verificatePrimaryAlt"
+            app:boxStrokeWidth="1dp"
+            app:hintEnabled="true"
+            app:hintTextColor="@color/hint_selector"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/outlinedTextField"
+            app:placeholderText="Enter your account number">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                style="@style/euc14reg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:maxLength="10"
+                android:inputType="number"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:hint="BVN"
+            android:textColorHint="@color/hint_selector"
+            app:boxBackgroundColor="@color/textfield_background"
+            app:boxStrokeColor="@color/stroke_selector"
+            app:boxStrokeErrorColor="@color/verificatePrimaryAlt"
+            app:boxStrokeWidth="1dp"
+            app:hintEnabled="true"
+            app:hintTextColor="@color/hint_selector"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:placeholderText="Enter your BVN">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etBvn"
+                style="@style/euc14reg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="11" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnSelectBank"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/space_transparent"
+            app:layout_constraintBottom_toBottomOf="@+id/outlinedTextField3"
+            app:layout_constraintEnd_toEndOf="@+id/outlinedTextField3"
+            app:layout_constraintStart_toStartOf="@+id/outlinedTextField3"
+            app:layout_constraintTop_toTopOf="@+id/outlinedTextField3" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button4"
+            style="@style/PrimaryButtonStyle"
+            android:layout_width="0dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="24dp"
+            android:text="Proceed"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/outlinedTextField3"
+            app:layout_constraintVertical_bias="0.7" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
+

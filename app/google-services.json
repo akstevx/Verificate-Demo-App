@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "143940549332",
+    "project_id": "verificate-6ad0a",
+    "storage_bucket": "verificate-6ad0a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:143940549332:android:899e86e0ac5622b2a29941",
+        "android_client_info": {
+          "package_name": "com.verificate.verificate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "143940549332-r9eqlf7v6q1n9uctmf6de3065fphf0o4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPK3b0BGuh0sUkzQG0u6IX0rdtr7NfnHQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "143940549332-r9eqlf7v6q1n9uctmf6de3065fphf0o4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

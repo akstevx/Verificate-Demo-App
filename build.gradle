@@ -1,0 +1,43 @@
+import config.Versions
+import config.dependencies.BuildDependencies
+
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext.kotlin_version = Versions.kotlinVersion
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+        maven {
+            url 'https://dl.bintray.com/jlmd/maven'
+        }
+    }
+
+    dependencies {
+        classpath BuildDependencies.build_tools
+        classpath BuildDependencies.kotlin_gradle_plugin
+        classpath BuildDependencies.navigation_args
+        classpath BuildDependencies.build_hilt
+        classpath BuildDependencies.google_service
+
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+        mavenCentral { url "https://jcenter.bintray.com/"}
+        maven { url 'https://dl.bintray.com/jlmd/maven' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

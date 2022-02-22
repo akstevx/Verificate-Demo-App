@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/circleheader"
+        android:backgroundTint="@color/verificatePrimaryAlt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvErrorMsg"
+            style="@style/euc14reg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="5dp"
+            android:textColor="@color/white"
+            android:text="Incorrect Password. Please check and try again"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnErrorAction"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="#1AFFFFFF"
+            android:fontFamily="@font/euclid_regular"
+            android:textSize="14sp"
+            android:text="Close"
+            app:strokeWidth="1dp"
+            app:strokeColor="#1AFFFFFF"
+            android:textAppearance="@style/PrimaryButtonStyle"
+            android:textColor="@color/white"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvErrorMsg"
+            app:layout_constraintVertical_bias="0.060000002" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

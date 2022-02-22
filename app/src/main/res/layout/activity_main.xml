@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+xmlns:ripple="http://schemas.android.com/apk/res-auto"
+android:layout_height="match_parent"
+tools:context=".framework.presentation.activities.MainActivity">
+
+<FrameLayout
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+</FrameLayout>
+
+
+<com.google.android.material.bottomnavigation.BottomNavigationView
+    android:id="@+id/bottomNavigation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:clipChildren="false"
+    android:background="@drawable/bottom_navigation_background"
+    app:itemIconTint="@drawable/bottom_navigation_color_selector"
+    app:itemTextColor="@drawable/bottom_navigation_color_selector"
+    app:labelVisibilityMode="labeled"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+    app:menu="@menu/menu_bottom_navigation" />
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/loadingRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8F2E2E2E"
+    android:elevation="8dp"
+    android:visibility="gone">
+
+    <com.gauravbhola.ripplepulsebackground.RipplePulseLayout
+        android:id="@+id/loadingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        ripple:duration="1000"
+        ripple:endRadius="150dp"
+        ripple:rippleColor="@color/rippleColor"
+        ripple:rippleType="fill"
+        ripple:startRadius="50dp"
+        ripple:strokeWidth="2dp">
+
+        <com.verificate.verificate.util.RoundedImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/loader_ic" />
+    </com.gauravbhola.ripplepulsebackground.RipplePulseLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--    <ImageView-->
+<!--        android:id="@+id/iv_add"-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_marginBottom="24dp"-->
+<!--        android:background="@drawable/bg_center_nav_option"-->
+<!--        android:contentDescription="@string/bottom_sheet_behavior"-->
+<!--        android:padding="18dp"-->
+<!--        android:src="@drawable/fab_icon"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

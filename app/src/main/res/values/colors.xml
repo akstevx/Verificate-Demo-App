@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#0F5CE8</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="rippleColor">#80FFFFFF</color>
+    <color name="verificatePrimary">#0F5CE8</color>
+    <color name="verificatePrimaryAlt">#ED5B5C</color>
+    <color name="verificatePrimaryLight">#FFE7E6</color>
+    <color name="verificateSecondary">#68717F</color>
+    <color name="verificateSecondaryLight">#1D9DF8</color>
+    <color name="space_transparent">#00000000</color>
+    <color name="background">#F3F3F3</color>
+    <color name="switch_transparent">#F2FFFFFF</color>
+    <color name="switchThumb">#65C466</color>
+    <color name="item_background">#F3F7FE</color>
+    <!--    text colors-->
+    <color name="verificateTextColorDark">#2A3459</color>
+    <color name="verificateTextColorAlt">#080A11</color>
+    <color name="verificateTextColorLight">#802A3459</color>
+    <color name="verificateTextColorPrimary">#0F5CE8</color>
+    <color name="verificateHintTextColor">#80333333</color>
+    <color name="textfield_background">#FFFFFF</color>
+    <color name="verificateTextSwitchColorGray">#E9E9EA</color>
+
+</resources>

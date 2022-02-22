@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/arrow_down.xml" value="0.20592105263157895" />
+        <entry key="app/src/main/res/drawable/bottom_navigation_background.xml" value="0.2708333333333333" />
+        <entry key="app/src/main/res/drawable/bottom_navigation_color_selector.xml" value="0.2708333333333333" />
+        <entry key="app/src/main/res/drawable/circleheader.xml" value="0.17105263157894737" />
+        <entry key="app/src/main/res/drawable/close_ic.xml" value="0.20592105263157895" />
+        <entry key="app/src/main/res/drawable/line.xml" value="0.17105263157894737" />
+        <entry key="app/src/main/res/drawable/otp_background.xml" value="0.2708333333333333" />
+        <entry key="app/src/main/res/drawable/rectangle_thumb.xml" value="0.17105263157894737" />
+        <entry key="app/src/main/res/drawable/rectangle_track.xml" value="0.17105263157894737" />
+        <entry key="app/src/main/res/drawable/verification_item_background.xml" value="0.17105263157894737" />
+        <entry key="app/src/main/res/layout/activity_intro.xml" value="0.12438586024250169" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.240625" />
+        <entry key="app/src/main/res/layout/fragment_activate_account.xml" value="0.16279222107422525" />
+        <entry key="app/src/main/res/layout/fragment_all_verifications.xml" value="0.16085526315789472" />
+        <entry key="app/src/main/res/layout/fragment_approved_verification_bottomsheet.xml" value="0.21275186258439932" />
+        <entry key="app/src/main/res/layout/fragment_create_password.xml" value="0.18866495834215238" />
+        <entry key="app/src/main/res/layout/fragment_dashboad.xml" value="0.1757896450802959" />
+        <entry key="app/src/main/res/layout/fragment_date_picker_bottom_sheet.xml" value="0.281439746328471" />
+        <entry key="app/src/main/res/layout/fragment_enter_otp.xml" value="0.24285158994392575" />
+        <entry key="app/src/main/res/layout/fragment_error_bottomsheet.xml" value="0.22059126623410613" />
+        <entry key="app/src/main/res/layout/fragment_intro.xml" value="0.3115583583551396" />
+        <entry key="app/src/main/res/layout/fragment_l_g_a_bottomsheet.xml" value="0.1592064506075689" />
+        <entry key="app/src/main/res/layout/fragment_location.xml" value="0.16085526315789472" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.19851226594549642" />
+        <entry key="app/src/main/res/layout/fragment_login2.xml" value="0.1868421052631579" />
+        <entry key="app/src/main/res/layout/fragment_logout_dialog.xml" value="0.17423873718455082" />
+        <entry key="app/src/main/res/layout/fragment_more.xml" value="0.1856806439009429" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.2660500544069641" />
+        <entry key="app/src/main/res/layout/fragment_read_gender_bottom_sheet.xml" value="0.16085526315789472" />
+        <entry key="app/src/main/res/layout/fragment_registration.xml" value="0.2190615320114069" />
+        <entry key="app/src/main/res/layout/fragment_reset_password.xml" value="0.24525656945299165" />
+        <entry key="app/src/main/res/layout/fragment_reset_password2.xml" value="0.2423665944097255" />
+        <entry key="app/src/main/res/layout/fragment_reset_password_otp.xml" value="0.16085526315789472" />
+        <entry key="app/src/main/res/layout/fragment_selfie.xml" value="0.11174767163446578" />
+        <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.1279018077484355" />
+        <entry key="app/src/main/res/layout/fragment_state_bottomsheet.xml" value="0.16085526315789472" />
+        <entry key="app/src/main/res/layout/fragment_status_bottomsheet.xml" value="0.2841185470125069" />
+        <entry key="app/src/main/res/layout/fragment_success.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_success_bottomsheet.xml" value="0.19621808592357937" />
+        <entry key="app/src/main/res/layout/fragment_support.xml" value="0.16085526315789472" />
+        <entry key="app/src/main/res/layout/fragment_terms_privacy_dialog.xml" value="0.2706225741960416" />
+        <entry key="app/src/main/res/layout/fragment_upload_i_d.xml" value="0.16085526315789472" />
+        <entry key="app/src/main/res/layout/fragment_verification_bottomsheet.xml" value="0.17276425277972365" />
+        <entry key="app/src/main/res/layout/item_selectgender.xml" value="0.16085526315789472" />
+        <entry key="app/src/main/res/layout/profile_item_layout.xml" value="0.2582733400521549" />
+        <entry key="app/src/main/res/layout/support_item_layout.xml" value="0.16085526315789472" />
+        <entry key="app/src/main/res/layout/verification_item_layout.xml" value="0.19963132278302612" />
+        <entry key="app/src/main/res/menu/menu_bottom_navigation.xml" value="0.2546875" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

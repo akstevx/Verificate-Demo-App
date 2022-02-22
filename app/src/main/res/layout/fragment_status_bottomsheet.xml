@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".framework.presentation.general.WarningBottomsheetFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/error_status_ic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView13"
+            style="@style/euc12reg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:text="@string/offline_warning"
+            android:textSize="14sp"
+            android:textColor="@color/verificateTextColorAlt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNegative"
+            style="@style/PrimaryButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            android:text="No"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnPositive"
+            app:layout_constraintStart_toStartOf="@+id/textView13"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPositive"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Yes"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/verificatePrimary"
+            android:textAllCaps="false"
+            android:fontFamily="@font/euclid_medium"
+            android:textSize="15sp"
+            app:cornerRadius="6dp"
+            app:strokeColor="@color/verificatePrimary"
+            app:strokeWidth="1dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/btnNegative"
+            app:layout_constraintEnd_toEndOf="@+id/textView13"
+            app:layout_constraintStart_toEndOf="@+id/btnNegative" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

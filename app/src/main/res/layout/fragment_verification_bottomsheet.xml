@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".framework.presentation.fragments.main.dashboard.verification.VerificationBottomsheetFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLocateOnMap"
+            android:layout_width="347dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="@color/verificatePrimary"
+            android:elevation="0dp"
+            android:text="Locate on map"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            app:cornerRadius="7dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtVerificationType" />
+
+        <Button
+            android:id="@+id/btnDecline"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="24dp"
+            android:backgroundTint="@color/white"
+            android:elevation="0dp"
+            android:text="Decline"
+            android:textAllCaps="false"
+            android:textColor="@color/verificatePrimary"
+            app:cornerRadius="7dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/btnAccept"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:strokeColor="@color/verificatePrimary"
+            app:strokeWidth="1dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAccept"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="@color/verificatePrimary"
+            android:elevation="0dp"
+            android:text="Accept"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:cornerRadius="7dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtVerificationType" />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/location_ic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView21"
+            style="@style/euc15Sem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="NGN 1,500.00"
+            android:textColor="@color/verificatePrimary"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView14"
+            app:layout_constraintStart_toStartOf="@+id/imageView14"
+            app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+        <TextView
+            android:id="@+id/textView24"
+            style="@style/euc13reg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="Name"
+            android:textColor="@color/verificateHintTextColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+
+        <TextView
+            android:id="@+id/txtName"
+            style="@style/euc14Med"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:text="Adeolu Osibodu"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/textView24"
+            app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+        <TextView
+            android:id="@+id/textView28"
+            style="@style/euc13reg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="Address"
+            android:textColor="@color/verificateHintTextColor"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView24"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/txtAddress"
+            style="@style/euc14Med"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="4517 Washington Ave. Manchester, Kentucky, United Kingdom"
+            android:textAlignment="textEnd"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView28"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+        <TextView
+            android:id="@+id/textView30"
+            style="@style/euc13reg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Requestor"
+            android:textColor="@color/verificateHintTextColor"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView32"
+            app:layout_constraintStart_toStartOf="@+id/txtName" />
+
+        <TextView
+            android:id="@+id/txtRequestor"
+            style="@style/euc14Med"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:text="Rubies Bank"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView30"
+            app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+        <TextView
+            android:id="@+id/textView32"
+            style="@style/euc13reg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Due Date"
+            android:textColor="@color/verificateHintTextColor"
+            app:layout_constraintEnd_toEndOf="@+id/txtAddress"
+            app:layout_constraintTop_toBottomOf="@+id/txtAddress" />
+
+        <TextView
+            android:id="@+id/txtDueDate"
+            style="@style/euc14Med"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="3rd Dec, 2021"
+            android:textAlignment="textEnd"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView32"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+        <TextView
+            android:id="@+id/textView34"
+            style="@style/euc13reg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Type"
+            android:textColor="@color/verificateHintTextColor"
+            app:layout_constraintStart_toStartOf="@+id/txtRequestor"
+            app:layout_constraintTop_toBottomOf="@+id/txtRequestor" />
+
+        <TextView
+            android:id="@+id/txtVerificationType"
+            style="@style/euc14Med"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Address Verification"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/textView34"
+            app:layout_constraintTop_toBottomOf="@+id/textView34" />
+
+        <TextView
+            android:id="@+id/textView36"
+            style="@style/euc13reg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:textColor="@color/verificateHintTextColor"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView34"
+            app:layout_constraintEnd_toEndOf="@+id/txtDueDate" />
+
+        <TextView
+            android:id="@+id/txtVerificationStatus"
+            style="@style/euc14Med"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Pending"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView36"
+            app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="195dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

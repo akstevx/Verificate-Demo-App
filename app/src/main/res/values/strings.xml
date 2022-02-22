@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Verificate</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    I have read, understood and I agree to Verificate Privacy Policy and Terms and conditions
+
+    <string name="privacy_policy"> I have read, understand and I agree to \nVerificate <font color='#0F5CE8'><u>Privacy Policy</u></font> and <font color='#0F5CE8'><u>Terms and \nconditions</u></font></string>
+    <string name="offline_warning">You\'re about to go offline. This means you will \n not be assigned addresses by our team and all \n your pending addresses will be reassigned to \n other agents. Are you sure about this? </string>
+    <string name="passport_image_text">We will process it securely to verify your \nidentity and keep your account safe</string>
+    <string name="passport_image_text_note"><b>NB:</b> Make sure we can see your face clearly, so we can match you to your photo ID.\n match your photo ID</string>
+
+    <string name="location_req_reason">We need
+        <b>location permission</b>
+        to locate your position.
+    </string>
+    <string name="camera_req_reason">We need
+        <b>camera permission</b>
+        to take your picture.
+    </string>
+    <string name="contact_req_reason">We need
+        <b>contact permission</b>
+        to pick a number.
+    </string>
+    <string name="location_reject_msg">We <b>can\'t</b> get your location <b>without location
+        permission</b>.
+    </string>
+    <string name="camera_reject_msg">We <b>can\'t</b> take your picture <b>without camera
+        permission</b>.
+    </string>
+    <string name="contact_reject_msg">We <b>can\'t</b> get your contacts <b>without contact
+        permission</b>.
+    </string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+</resources>
