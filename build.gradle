@@ -20,6 +20,7 @@ buildscript {
         classpath BuildDependencies.navigation_args
         classpath BuildDependencies.build_hilt
         classpath BuildDependencies.google_service
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.30'
 
 
         // NOTE: Do not place your application dependencies here; they belong

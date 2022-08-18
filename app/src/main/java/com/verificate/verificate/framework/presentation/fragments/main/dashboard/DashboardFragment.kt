@@ -26,23 +26,12 @@ import com.verificate.verificate.util.SingleLiveEvent
 import com.verificate.verificate.util.hide
 import com.verificate.verificate.util.show
 import timber.log.Timber
-import android.location.Address
-import android.location.Geocoder
 import android.net.Uri
-import com.google.firebase.firestore.GeoPoint
-import java.io.IOException
-import java.util.*
 
 
 class DashboardFragment : BaseFragment() {
     private var _binding: FragmentDashboadBinding?= null
     private val binding get() = _binding!!
-    private var longitude:Double? =null
-    private var latitude:Double? =null
-    private var mLongitude:Double? =null
-    private var mLatitude:Double? =null
-    private lateinit var  geocoder : Geocoder
-
     private val agentViewModel: AgentViewModel by activityViewModels()
     private val verificationViewModel: VerificationViewModel by activityViewModels()
     private val itemSelectedListener = SingleLiveEvent<Verification>()
@@ -54,7 +43,6 @@ class DashboardFragment : BaseFragment() {
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
 
-        geocoder = Geocoder(requireContext(), Locale.getDefault())
         showNavigationBar(false)
         _binding = FragmentDashboadBinding.inflate(inflater, container, false)
         return _binding!!.root
@@ -74,7 +62,6 @@ class DashboardFragment : BaseFragment() {
         if (!verificationViewModel.hasVerificationsLoaded){
             verificationViewModel.hasVerificationsLoaded = true
             verificationViewModel.getAssignedVerifications()
-//            binding.swipeToRefresh.post { binding.swipeToRefresh.isRefreshing = true }
         }
     }
 
@@ -140,17 +127,6 @@ class DashboardFragment : BaseFragment() {
 
         VerificationBottomsheetFragment.onLocateOnMap.observeChange(viewLifecycleOwner){
             verificationViewModel.currentVerification = it
-
-//            longitude = getLocationFromAddress(it.verificationAddress)?.longitude
-//            latitude = getLocationFromAddress(it.verificationAddress)?.latitude
-//
-//            localStorage.getAddress()?.let { currentLocation ->
-//                mLongitude = currentLocation.longitude
-//                mLatitude = currentLocation.latitude
-//            }
-
-            Timber.e("ADDRESS IS: ${it.verificationAddress} LOCATION: $mLongitude,$mLatitude AND DESTINATION: $longitude,$latitude")
-
             val intent = Intent(
                 Intent.ACTION_VIEW,
                 Uri.parse("http://maps.google.com/maps?saddr=6.41,3.5510172&daddr=6.4392712,3.5480172")
@@ -167,9 +143,9 @@ class DashboardFragment : BaseFragment() {
 
     private fun enableLocation(){
         CheckPermissionUtil.initializeLocation(requireContext(), {
-            showError("You will be unable to verify items until your location is enabled") //To change body of created functions use File | Settings | File Templates.
+            showError(getString(R.string.location_error_text)) //To change body of created functions use File | Settings | File Templates.
         }, {
-            showSuccess("Location Permission has been granted, you can verify items now")
+            showSuccess(getString(R.string.location_success_text))
         })
     }
 
@@ -219,31 +195,6 @@ class DashboardFragment : BaseFragment() {
             localStorage.setOnlineStatus(b)
             Timber.e("LOCAL STATUS---> ${localStorage.checkOnlineStatus()}")
         }
-    }
-
-    fun getLocationFromAddress(strAddress: String?): GeoPoint? {
-//        val coder = Geocoder(this)
-        val address: List<Address>?
-        var p1: GeoPoint? = null
-
-        try {
-            address = geocoder.getFromLocationName(strAddress, 1)
-            if (address == null) {
-
-                return null
-            }
-            val location: Address = address[0]
-            location.latitude
-            location.longitude
-            p1 = GeoPoint(
-                (location.latitude * 1E6),
-                (location.longitude * 1E6)
-            )
-            return p1
-        } catch (e: IOException) {
-            e.printStackTrace()
-        }
-        return null
     }
 
     override fun onDestroy() {

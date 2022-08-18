@@ -2,6 +2,7 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.Bridge">
         <!-- Customize your theme here. -->
+
     </style>
 
     <style name="Divider">
@@ -12,6 +13,15 @@
 
 
 
+
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?attr/actionBarSize"-->
+<!--        android:background="@color/white"-->
+<!--        android:elevation="4dp"-->
+<!--        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"-->
+<!--        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>-->
 
 
 <!--    NB: you do not need to create new styles with different font sizes or text color, you can specify that in your view -->

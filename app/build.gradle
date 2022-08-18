@@ -84,8 +84,6 @@ dependencies {
     implementation (SupportDependencies.material_design)
     implementation (SupportDependencies.swipe_refresh_layout)
     implementation (SupportDependencies.material_design)
-//    implementation (SupportDependencies.legacy_support)
-//    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     //Room Dependencies
     implementation (Dependencies.room_ktx)
@@ -113,11 +111,10 @@ dependencies {
     implementation 'androidx.hilt:hilt-common:1.0.0'
 
     //Work Manager Dependencies
-    def work_version = "1.0.1"
+    def work_version = "2.7.0"
     implementation "androidx.work:work-runtime-ktx:$work_version"
-    implementation "android.arch.work:work-runtime-ktx:$work_version"
+//    implementation "android.arch.work:work-runtime-ktx:$work_version"
     implementation("androidx.hilt:hilt-work:1.0.0")
-//    implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
 
     // Koin Android ViewModel feature
     implementation 'org.koin:koin-android-viewmodel:2.0.1'

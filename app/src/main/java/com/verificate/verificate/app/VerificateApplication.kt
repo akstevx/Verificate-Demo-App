@@ -19,8 +19,9 @@ class VerificateApplication : MultiDexApplication(), Configuration.Provider{
     override fun onCreate() {
         super.onCreate()
         initTimber()
-        WorkManager.initialize(this, workManagerConfiguration)
+//        WorkManager.initialize(this, workManagerConfiguration)
     }
+
     private fun initTimber() {
         if (BuildConfig.DEBUG) {
             Timber.plant(Timber.DebugTree())

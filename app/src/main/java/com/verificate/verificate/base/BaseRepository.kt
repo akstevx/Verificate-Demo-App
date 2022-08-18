@@ -119,6 +119,7 @@ open class BaseRepository {
 
         }
     }
+
     suspend fun <T:Any> safeGetApiCallAndNormalOperation(apiCall: () ->Deferred<T>, checkIfSuccessful:(T)->Boolean,onSuccessOperations:(response:T)->Unit): UseCaseResult<T> {
         return try {
             val response = apiCall().await()

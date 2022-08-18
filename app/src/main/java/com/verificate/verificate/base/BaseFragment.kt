@@ -2,6 +2,7 @@ package com.verificate.verificate.base
 
 import android.content.Context
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -31,6 +32,7 @@ open class BaseFragment() : Fragment(), CoroutineScope, SaveData {
     var isOnline:Boolean = false
     var isLoggedIn:Boolean = false
     var isSignedIn:Boolean = false
+
 
     override val coroutineContext: CoroutineContext
         get() = backgroudJobs + Dispatchers.Main
@@ -146,7 +148,7 @@ open class BaseFragment() : Fragment(), CoroutineScope, SaveData {
     fun showSuccess(successMessage:String){
         mFragmentNavigation.openBottomSheet(SuccessBottomsheetFragment.newInstance(body = successMessage))
     }
-    fun displaySuccess(successTitle:String, successMessage:String, action: () -> Unit){
+    fun displaySuccess(successTitle:String = "Successful", successMessage:String, action: () -> Unit){
         mFragmentNavigation.openDialogFragment(
             SuccessFragment.newInstance(successTitle, successMessage) { action() })
     }

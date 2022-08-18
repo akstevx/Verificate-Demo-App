@@ -1,14 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".framework.presentation.fragments.main.payment.PaymentFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView37"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Payment"
+            style="@style/euc14Med"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView21"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/wallet_frame"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+        <ImageView
+            android:id="@+id/imageView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/wallet_ic"
+            app:layout_constraintStart_toStartOf="@+id/imageView21"
+            app:layout_constraintTop_toTopOf="@+id/imageView21" />
+
+        <TextView
+            android:id="@+id/textView38"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Wallet balance"
+            style="@style/euc12reg"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView22"
+            app:layout_constraintStart_toEndOf="@+id/imageView22"
+            app:layout_constraintTop_toTopOf="@+id/imageView22" />
+
+        <TextView
+            android:id="@+id/textView39"
+            style="@style/euc14Med"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="₦0.00"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/imageView22"
+            app:layout_constraintTop_toBottomOf="@+id/textView38" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCashout"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40dp"
+            android:layout_marginEnd="24dp"
+            android:text="Cashout"
+            android:textSize="13sp"
+            android:fontFamily="@font/euclid_regular"
+            android:textColor="@color/verificatePrimary"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView21"
+            app:layout_constraintEnd_toEndOf="@+id/imageView21"
+            app:layout_constraintTop_toTopOf="@+id/imageView21" />
+
+        <TextView
+            android:id="@+id/textView40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Recent transactions"
+            style="@style/euc14reg"
+            app:layout_constraintStart_toStartOf="@+id/imageView21"
+            app:layout_constraintTop_toBottomOf="@+id/imageView21" />
+
+        <ImageView
+            android:id="@+id/imageView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/filter_ic"
+            app:layout_constraintBottom_toBottomOf="@+id/textView41"
+            app:layout_constraintEnd_toStartOf="@+id/textView41"
+            app:layout_constraintTop_toTopOf="@+id/textView41" />
+
+        <TextView
+            android:id="@+id/textView41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filter"
+            style="@style/euc14reg"
+            android:textColor="@color/verificatePrimary"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView40"
+            app:layout_constraintEnd_toEndOf="@+id/imageView21" />
+
+        <Button
+            android:id="@+id/btnFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/space_transparent"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView23"
+            app:layout_constraintEnd_toEndOf="@+id/textView41"
+            app:layout_constraintStart_toStartOf="@+id/imageView23"
+            app:layout_constraintTop_toTopOf="@+id/textView41" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            style="@style/Widget.Design.TabLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnFilter"
+            app:tabIndicatorColor="@color/verificatePrimary"
+            app:tabTextColor="@color/tab_text_color"
+
+            app:tabIndicatorHeight="2dp"
+            app:tabMode="fixed" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tabs"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

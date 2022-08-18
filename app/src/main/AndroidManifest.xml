@@ -5,10 +5,11 @@
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
@@ -20,24 +21,6 @@
         android:roundIcon="@drawable/app_icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.Verificate" >
-
-<!--        <provider-->
-<!--            android:name=".app.VerificateApplication"-->
-<!--            android:authorities="${applicationId}.androidx-startup"-->
-<!--            android:exported="false"-->
-<!--            tools:node="merge"-->
-<!--            tools:ignore="MissingClass,WrongManifestParent">-->
-
-<!--            <meta-data-->
-<!--                android:name="com.verificate.verificate.services.GetVerificationsWorker"-->
-<!--                android:value="androidx.startup" />-->
-<!--        </provider>-->
-
-<!--        <provider-->
-<!--            android:name="androidx.work.impl.WorkManagerInitializer"-->
-<!--            android:authorities="${applicationId}.workmanager-init"-->
-<!--            tools:node="remove"-->
-<!--            tools:ignore="WrongManifestParent" />-->
 
         <provider
             android:name="androidx.work.impl.WorkManagerInitializer"
@@ -51,10 +34,6 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBirYO4db6FGPKHuP4a8z2fdCqWe7swfs8" />
-
-<!--        <meta-data-->
-<!--            android:name="com.google.android.maps.v2.API_KEY"-->
-<!--            android:value="${MAPS_API_KEY}" />-->
 
         <activity
             android:name=".framework.presentation.activities.IntroActivity"

@@ -37,12 +37,6 @@ class IntroFragment : BaseFragment() {
 
     }
 
-    fun isNameInLetters(nameChars: List<Char>, letters: List<Char>): Boolean {
-        // Write your code here.
-        return letters.containsAll(nameChars)
-    }
-
-
     override fun onDestroy() {
         super.onDestroy()
         binding = null

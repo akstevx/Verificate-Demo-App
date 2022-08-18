@@ -22,7 +22,7 @@
         android:layout_height="match_parent"
         android:background="#8F2E2E2E"
         android:elevation="8dp"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <com.gauravbhola.ripplepulsebackground.RipplePulseLayout
             android:id="@+id/loadingView"
